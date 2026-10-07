@@ -1,0 +1,14 @@
+# Python 3.11; the versions of the paper's runs
+# training and the rebuild of the training files
+torch==2.6.0
+transformers==5.0.0
+tokenizers==0.22.2
+peft==0.19.1
+pyarrow==23.0.0
+huggingface_hub
+numpy
+scipy
+# concept construction (WordNet folding depends on the NLTK version)
+nltk==3.9.2
+# collection and labeling (separate environment with GPUs)
+# spacy + en_core_web_sm, vllm

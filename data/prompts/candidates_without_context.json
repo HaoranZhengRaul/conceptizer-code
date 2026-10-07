@@ -1,0 +1,29 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "role": "candidates without context (once per word)",
+ "sampling": {
+  "temperature": 1.0,
+  "n": 5,
+  "max_tokens": 192,
+  "seed": 0
+ },
+ "system": "You are an English thesaurus. Given a WORD and its part of speech, list the single-word synonyms that could replace it in SOME context, across ALL of its meanings.\n\nThis is a comprehensive, context-free step: cover EVERY sense the word has, and include both close and looser near-synonyms. A later step selects the right ones for each context.\n\nRules:\n- Same part of speech as the word.\n- SINGLE WORDS ONLY — no multi-word phrases, and never join words together.\n- Never the word itself; no duplicates; no direct antonyms.\n- Cover ALL senses: if the word has several meanings, include synonyms of each; up to 25.\n- Output [] only if the word has no synonyms in any sense (e.g. a proper-noun name or opaque code).\n- Output ONLY a JSON array of lowercase strings, nothing else.",
+ "examples": [
+  {
+   "word": "convene",
+   "pos": "verb",
+   "answer": "[\"meet\", \"gather\", \"assemble\", \"congregate\", \"convoke\", \"summon\"]"
+  },
+  {
+   "word": "bank",
+   "pos": "noun",
+   "answer": "[\"shore\", \"edge\", \"slope\", \"embankment\", \"treasury\", \"lender\", \"reserve\", \"row\", \"tier\", \"heap\", \"mound\"]"
+  },
+  {
+   "word": "radium",
+   "pos": "noun",
+   "answer": "[]"
+  }
+ ],
+ "input": "Word: \"{lemma}\" ({noun|verb|adjective})"
+}

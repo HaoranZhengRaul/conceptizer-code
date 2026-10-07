@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+runs/
+work/
+
+# rebuilt files and downloads (construction.rebuild, README)
+data/llama3*/
+data/qwen2.5*/
+data/falcon3*/
+fineweb/
