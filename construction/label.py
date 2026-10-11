@@ -1,4 +1,4 @@
-"""Synonym candidates and the LLM judge (paper Section 3, Appendices C and I), with vLLM.
+"""Synonym candidates and the LLM judge (paper Section 3, Appendices C and H), with vLLM.
 
 Stages (run in order; each reads the previous stage's file in --workdir):
   prep     occurrences.jsonl -> occurrences of words (lemma, POS) with at least 3 occurrences

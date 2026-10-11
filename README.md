@@ -8,7 +8,7 @@ Code and data for the paper (anonymous submission).
   Llama 3, Qwen2.5 and Falcon3 tokenizers (`data/concept_vocabulary.json`, `data/wordmaps/`).
 - **The concept-labeled training data:** the concept targets of every training and held-out file
   of the paper, which rebuild the files from public FineWeb-Edu documents (`data/labels/`), and the
-  concept-construction sample, the 149,919 judged occurrences the concepts are built from
+  concept-construction sample, 149,919 judged occurrences, of which 88,367 build the concepts
   (`data/construction/`).
 - **The construction pipeline:** occurrences, LLM and WordNet candidates, the LLM judge and its
   prompts, senses and concepts, word maps, training files (`construction/`, `data/prompts/`).
@@ -87,7 +87,8 @@ python -m construction.wordmap --tokenizer meta-llama/Llama-3.2-1B-Instruct \
     --sample data/construction/construction_sample.jsonl.gz --out llama3.json
 ```
 
-The first builds the 9,061 concepts from the 149,919 judged occurrences in `data/construction/`
+The first builds the 9,061 concepts from the concept-construction sample in `data/construction/` (88,367 of its
+149,919 judged occurrences, as in Appendix C)
 (with NLTK 3.9.2: WordNet folding depends on its version); the second builds a tokenizer's word map.
 
 ## 4. Label new data from scratch

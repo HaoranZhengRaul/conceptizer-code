@@ -35,10 +35,10 @@ hold every document used.
 
 ## Concept-construction sample (`data/construction/`)
 
-- `construction_sample.jsonl.gz`: the concept-construction sample, the 149,919 judged occurrences the
-  concepts are built from, in the order that numbers the concepts:
+- `construction_sample.jsonl.gz`: the concept-construction sample, 149,919 judged occurrences, of which
+  88,367 build the concepts, in the order that numbers the concepts:
   `{"key", "gold", "kept", "induction", "fineweb_id", "split"}` (`kept`: the judge's kept words with the
-  share of its 3 answers).
+  share of its readable answers, 3 for most occurrences).
 - `construction_documents.json`: their documents, which never enter a held-out file.
 
 ## Not included
