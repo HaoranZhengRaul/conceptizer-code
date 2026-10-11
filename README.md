@@ -1,6 +1,6 @@
 # Conceptizer: Next-Token Prediction Is Not All You Need
 
-Code and data for the paper (anonymous submission).
+Code and data for the paper Conceptizer: Next-Token Prediction Is Not All You Need (Haoran Zheng and Chen Shani).
 
 ## This repository contains
 
